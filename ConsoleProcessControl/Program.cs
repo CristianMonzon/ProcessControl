@@ -1,9 +1,6 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using BusinessProcessControl;
+using FabricatorProcessControl;
 
 namespace ConsoleProcessControl
 {
@@ -11,14 +8,20 @@ namespace ConsoleProcessControl
     {
         static void Main(string[] args)
         {
-            //TODO. Add Fabricator
-            BusinessTask bt = new BusinessTask();
-            bt.ReportMessage += Bt_ReportMessage;
-            bt.Run();
+                      
+            
+            var btProcessFab = new Fabricator();
+            IBusinessTask bTask = btProcessFab.CreateBusinessTask();            
+            bTask.ReportMessage += Bt_ReportMessage;
+
+            bTask.AddTask(new ProcessControl_ContinousCharge.ProcessFile());
+            bTask.AddTask(new ProcessControl_ContinousCharge.ReadFile());
+            bTask.AddTask(new ProcessControl_ContinousCharge.ResumeFile());
+
+            bTask.Run();
 
             Console.ReadKey();
-
-            // Go to http://aka.ms/dotnet-get-started-console to continue learning how to build a console app! 
+                        
         }
 
 
