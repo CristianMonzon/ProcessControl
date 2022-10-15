@@ -10,7 +10,7 @@ namespace BusinessProcessControl
     public delegate void OnReportMessage(string message);
 
 
-    public class BusinessTask
+    public class BusinessTask : IBusinessTask
     {
 
         public event OnReportMessage ReportMessage;
