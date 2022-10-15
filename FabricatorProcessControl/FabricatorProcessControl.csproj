@@ -5,9 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Task\**" />
-    <EmbeddedResource Remove="Task\**" />
-    <None Remove="Task\**" />
+    <ProjectReference Include="..\BusinessProcessControl\BusinessProcessControl.csproj" />
   </ItemGroup>
 
 </Project>
