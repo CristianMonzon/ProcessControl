@@ -102,9 +102,14 @@ namespace WindowsFormsProcessControl
 
         private void BgWorkerProcessControl_DoWork(object sender, DoWorkEventArgs e)
         {
-            BusinessTask bt = new BusinessTask();
-            bt.ReportMessage += Bt_ReportMessage;
-            bt.Run();
+            BusinessTask bTask = new BusinessTask();
+
+            bTask.AddTask(new ProcessControl_ContinousCharge.ProcessFile());
+            bTask.AddTask(new ProcessControl_ContinousCharge.ReadFile());
+            bTask.AddTask(new ProcessControl_ContinousCharge.ResumeFile());
+
+            bTask.ReportMessage += Bt_ReportMessage;
+            bTask.Run();
 
         }
 

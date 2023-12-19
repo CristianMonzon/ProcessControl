@@ -8,3 +8,19 @@ ConsoleProcessControl/obj/
 BusinessProcessControl/obj/
 
 .vs/
+
+_documentation/
+
+BusinessProcessControl/bin/
+
+ConsoleProcessControl/bin/
+
+FabricatorProcessControl/bin/
+
+FabricatorProcessControl/obj/
+
+ProcessControl_ContinousCharge/obj/
+
+ProcessControl_ContinousCharge/bin/
+
+WindowsFormsProcessControl/bin/

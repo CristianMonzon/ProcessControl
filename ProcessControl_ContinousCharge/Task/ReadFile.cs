@@ -1,11 +1,10 @@
 ﻿using BusinessProcessControl;
-using System.Threading.Tasks;
 
 
 namespace ProcessControl_ContinousCharge
 {
     
-    public class ReadFile : BusinessProcessControl.Task, ITask
+    public class ReadFile : Task, ITask
     {
         #region Properties
 
