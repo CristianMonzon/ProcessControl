@@ -13,12 +13,6 @@ namespace BusinessProcessControl
         protected IList<ITask> ListTasks; 
 
         #endregion
-
-        #region Constructor
-
-
-        #endregion
-
       
     }
 

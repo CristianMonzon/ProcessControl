@@ -1,10 +1,9 @@
 ﻿using BusinessProcessControl;
-using System.Threading.Tasks;
 
 namespace ProcessControl_ContinousCharge
 {
     
-    public class ResumeFile : BusinessProcessControl.Task, ITask
+    public class ResumeFile : Task, ITask
     {
         #region Properties
 

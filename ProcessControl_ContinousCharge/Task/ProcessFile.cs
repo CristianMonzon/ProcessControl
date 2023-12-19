@@ -1,6 +1,4 @@
 ﻿using BusinessProcessControl;
-using System.Threading.Tasks;
-
 
 namespace ProcessControl_ContinousCharge
 {

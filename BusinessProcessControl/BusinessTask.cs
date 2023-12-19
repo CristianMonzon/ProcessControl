@@ -41,20 +41,11 @@ namespace BusinessProcessControl
 
         public void Run()
         {
-            ReadTask();
-
             Start();
 
             Execute();
 
             End();
-        }
-
-        private void ReadTask()
-        {
-            //this.ListTasks.Add(new ReadFile());
-            //this.ListTasks.Add(new ProcessFile());
-            //this.ListTasks.Add(new ResumeFile());
         }
 
         private void Execute()
