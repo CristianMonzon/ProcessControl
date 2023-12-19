@@ -2,12 +2,11 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>ProcessControl_ContinuousCharge</AssemblyName>
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Task\**" />
-    <EmbeddedResource Remove="Task\**" />
-    <None Remove="Task\**" />
+    <ProjectReference Include="..\BusinessProcessControl\BusinessProcessControl.csproj" />
   </ItemGroup>
 
 </Project>

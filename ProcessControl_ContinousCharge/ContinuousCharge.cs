@@ -1,13 +1,11 @@
-﻿using System;
+﻿using BusinessProcessControl;
+using System;
 using System.Collections.Generic;
-using System.Text;
 
-namespace BusinessProcessControl
+namespace ProcessControl_ContinousCharge
 {
-
-    public delegate void OnReportMessage(string message);
-
-    public class BusinessTask : AbstractBusinessTask, IBusinessTask
+    
+    public class ContinousCharge : AbstractBusinessTask, IBusinessTask
     {
 
         public event OnReportMessage ReportMessage;
@@ -18,14 +16,14 @@ namespace BusinessProcessControl
 
         #region Constructor
 
-        public BusinessTask(IList<ITask> pList)
+        public ContinousCharge(IList<ITask> pList)
         {
             ListTasks = pList;
             //https://docs.microsoft.com/es-es/dotnet/api/system.func-1?view=netcore-3.1
 
         }
 
-        public BusinessTask()
+        public ContinousCharge()
         {
             ListTasks = new List<ITask>();
         }
@@ -34,13 +32,9 @@ namespace BusinessProcessControl
 
         #region Methods
 
-        private void Start()
-        {
-            ReportMessage("Process start");
-        }
-
         public void Run()
         {
+         
             Start();
 
             Execute();
@@ -48,14 +42,24 @@ namespace BusinessProcessControl
             End();
         }
 
+        private void Start()
+        {
+            ReportMessage("Process start");
+        }
+
+        
+        public void AddTask(ITask task)
+        {
+            this.ListTasks.Add(task);            
+        }
+
         private void Execute()
-        {            
+        {
             foreach (ITask item in ListTasks)
             {
                 item.Execute();
                 ReportMessage(string.Format("Task {0} ended", item.Name));
             }
-
         }
 
         private void End()
@@ -63,14 +67,9 @@ namespace BusinessProcessControl
             ReportMessage("Process end");
         }
 
-        public void AddTask(ITask processFile)
-        {
-            if (ListTasks==null) ListTasks = new List<ITask>();
-            this.ListTasks.Add(processFile);
-        }
-
         #endregion
 
     }
+
 
 }

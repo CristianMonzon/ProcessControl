@@ -2,7 +2,7 @@
 
 namespace BusinessProcessControl
 {
-    public abstract class Task //: ITask
+    public abstract class Task : ITask
     {
         public virtual string Name
         {
@@ -16,7 +16,7 @@ namespace BusinessProcessControl
 
         public virtual void Execute()
         {
-            System.Threading.Thread.Sleep(2000);
+            //System.Threading.Thread.Sleep(2000);
         }
 
         #endregion

@@ -8,9 +8,10 @@
     <OutputType>Exe</OutputType>
     <RootNamespace>ConsoleProcessControl</RootNamespace>
     <AssemblyName>ConsoleProcessControl</AssemblyName>
-    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -52,6 +53,14 @@
     <ProjectReference Include="..\BusinessProcessControl\BusinessProcessControl.csproj">
       <Project>{4349be55-173b-4f5d-acac-ea97c82ae287}</Project>
       <Name>BusinessProcessControl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FabricatorProcessControl\FabricatorProcessControl.csproj">
+      <Project>{8c93f578-7460-48c8-ac03-562f1f5ad6ce}</Project>
+      <Name>FabricatorProcessControl</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ProcessControl_ContinousCharge\ProcessControl_ContinuousCharge.csproj">
+      <Project>{040fe968-2f25-4acc-8b4f-53f623d1e58d}</Project>
+      <Name>ProcessControl_ContinuousCharge</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

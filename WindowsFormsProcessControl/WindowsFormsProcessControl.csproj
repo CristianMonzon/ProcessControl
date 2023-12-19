@@ -84,6 +84,10 @@
       <Project>{4349be55-173b-4f5d-acac-ea97c82ae287}</Project>
       <Name>BusinessProcessControl</Name>
     </ProjectReference>
+    <ProjectReference Include="..\ProcessControl_ContinousCharge\ProcessControl_ContinuousCharge.csproj">
+      <Project>{040fe968-2f25-4acc-8b4f-53f623d1e58d}</Project>
+      <Name>ProcessControl_ContinuousCharge</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
